@@ -1,0 +1,23 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+
+metadata:
+  name: uptime-kuma-db
+  namespace: staging
+
+spec:
+  instances: 1
+
+  storage:
+    size: 1Gi
+
+  superuserSecret:
+    name: uptime-kuma-db-superuser
+
+  bootstrap:
+    initdb:
+      database: kuma
+      owner: kuma
+
+      secret:
+        name: uptime-kuma-db-user
