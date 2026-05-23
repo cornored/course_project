@@ -5,4 +5,5 @@ resources:
   - postgres-secret.yaml
   - postgres-superuser-secret.yaml
   - postgres-cluster.yaml
+  - helm-repository.yaml
   - helm-release.yaml
