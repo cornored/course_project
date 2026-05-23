@@ -2,7 +2,7 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 
 metadata:
-  name: uptime-kuma-db
+  name: gitea-db
   namespace: staging
 
 spec:
@@ -12,12 +12,12 @@ spec:
     size: 1Gi
 
   superuserSecret:
-    name: uptime-kuma-db-superuser
+    name: gitea-db-superuser
 
   bootstrap:
     initdb:
-      database: kuma
-      owner: kuma
+      database: gitea
+      owner: gitea
 
       secret:
-        name: uptime-kuma-db-user
+        name: gitea-db-user
