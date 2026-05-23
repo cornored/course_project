@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - ../../../infrastructure/cnpg
   - ../../../infrastructure/traefik
+  - ../../../infrastructure/gitea
