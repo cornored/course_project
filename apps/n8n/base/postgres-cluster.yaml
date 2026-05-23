@@ -2,7 +2,7 @@ apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 
 metadata:
-  name: gitea-db
+  name: n8n-db
   namespace: staging
 
 spec:
@@ -12,12 +12,12 @@ spec:
     size: 1Gi
 
   superuserSecret:
-    name: gitea-db-superuser
+    name: n8n-db-superuser
 
   bootstrap:
     initdb:
-      database: gitea
-      owner: gitea
+      database: n8n
+      owner: n8n
 
       secret:
-        name: gitea-db-user
+        name: n8n-db-user
