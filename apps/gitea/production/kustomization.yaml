@@ -10,6 +10,9 @@ patches:
         path: /spec/values/ingress/hosts/0/host
         value: gitea.local
       - op: add
+        path: /spec/values/replicaCount
+        value: 1
+      - op: add
         path: /spec/values/resources
         value:
           requests:
